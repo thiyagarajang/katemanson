@@ -1,8 +1,16 @@
 body {
-    font-family: verdana, sans-serif
+    font-family: verdana, sans-serif;
 }
 
-table.menu {
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table.navmenu {
     background: black;
     border-collapse: collapse;
     border-top: 15px solid black;
@@ -11,26 +19,31 @@ table.menu {
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
-    width: 1000px;
+    width: 100%;
 }
-table.menu td.current {
+table.navmenu td.navcurrent {
     background: white;
     color: black;
 }
-table.menu td a {
+table.navmenu td a {
     font-weight: bold;
     text-decoration: none;
 }
-table.menu td a:link {
+table.navmenu td a:link {
     color: white;
 }
-table.menu td a:visited {
+table.navmenu td a:visited {
     color: white;
 }
 
-div.contentbox {
+div.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+div.blackbox {
     border: 15px solid black;
-    width: 970px;
 }
 
 div.content {
