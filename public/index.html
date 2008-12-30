@@ -2,36 +2,15 @@
 <html>
 <head>
     <title>Kate Manson</title>
-    <style type="text/css">
-        table.menu {
-            border-collapse: collapse;
-            width: 1000px;
-        }
-        table.menu td {
-            background: black;
-            border-top: 1em solid black;
-            border-bottom: 0.3em solid black;
-            color: white;
-            text-align: center
-        }
-        table.menu td a {
-            font-weight: bold;
-            text-decoration: none;
-        }
-        table.menu td a:link {
-            color: white
-        }
-        table.menu td a:visited {
-            color: white
-        }
-    </style>
+    <link rel="stylesheet" href="style/default.css" />
 </head>
 <body>
 
 <img src="/images/kate.png" alt="kate"/>
+
 <table class="menu">
     <tr>
-        <td><a href="/">home</a></td>
+        <td class="current">home</td>
         <td><a href="/gallery">gallery</a></td>
         <td><a href="/contact">contact</a></td>
         <td><a href="/emporium">emporium</a></td>
@@ -40,13 +19,15 @@
     </tbody>
 </table>
 
-<div class="content">
-    <p>Welcome.</p>
-    <p>I'm Kate Manson, a freelance cartoonist living in London.</p>
-    <p>You can browse my work here, ask about commissioning an original cartoon, contact me with your ideas, order a print, or find out what I'm doing via my blog.</p>
+<div class="contentbox">
+    <div class="content">
+        <p>Welcome.</p>
+        <p>I'm Kate Manson, a freelance cartoonist living in London.</p>
+        <p>You can browse my work here, ask about commissioning an original cartoon, contact me with your ideas, order a print, or find out what I'm doing via my blog.</p>
+        <div class="copyright">All images copyright Kate Manson &copy;2009</div>
+    </div>
 </div>
 
-<div class="copyright">All images copyright Kate Manson &copy;2009</div>
 
 </body>
 </html>

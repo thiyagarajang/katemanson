@@ -1,0 +1,45 @@
+body {
+    font-family: verdana, sans-serif
+}
+
+table.menu {
+    background: black;
+    border-collapse: collapse;
+    border-top: 15px solid black;
+    color: white;
+    font-family: serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    width: 1000px;
+}
+table.menu td.current {
+    background: white;
+    color: black;
+}
+table.menu td a {
+    font-weight: bold;
+    text-decoration: none;
+}
+table.menu td a:link {
+    color: white;
+}
+table.menu td a:visited {
+    color: white;
+}
+
+div.contentbox {
+    border: 15px solid black;
+    width: 970px;
+}
+
+div.content {
+    margin: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+div.copyright {
+    margin-top: 3em;
+    color: gray;
+    font-size: 0.8em;
+}
