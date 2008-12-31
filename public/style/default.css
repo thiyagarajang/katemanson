@@ -20,6 +20,12 @@ img.thumb {
     width: 100px;
 }
 
+a.lightbox-enabled img {
+    background-color: #ECECEC;
+    border: 1px solid #999999;
+    padding: 5px 5px 10px;
+}
+
 table.menu {
     background: black;
     border-collapse: collapse;
