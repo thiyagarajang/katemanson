@@ -8,7 +8,7 @@ describe 'layouts/application' do
   end
 
   it "should set the page title to 'Kate Manson : @nav_title'" do
-    assigns[:nav_title] = 'Location'
+    assigns[:page_title] = 'Location'
     render 'content/home', :layout => 'application'
     response.should have_tag('title', 'Kate Manson : Location')
   end
