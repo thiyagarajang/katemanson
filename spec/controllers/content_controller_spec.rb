@@ -8,6 +8,11 @@ describe ContentController do
         assigns[:page_title].should == action.capitalize
       end
 
+      it "should set 'current_page' to '#{action}' for the view" do
+        get action
+        assigns[:current_page].should == action
+      end
+
       it "should set 'menu' to \"['home', 'gallery', 'contact', 'emporium', 'blog']\" for the view" do
         get action
         assigns[:menu].should == ['home', 'gallery', 'contact', 'emporium', 'blog']
