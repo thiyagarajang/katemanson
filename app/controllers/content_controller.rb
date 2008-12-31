@@ -20,8 +20,8 @@ class ContentController < ApplicationController
 
   def set_nav_context
     @current_page = action_name
+    @page_title = @current_page.capitalize
     # TODO: figure out how to sort action_methods appropriately
     @menu = ['home', 'gallery', 'contact', 'emporium', 'blog']
-    @page_title = @current_page.capitalize
   end
 end

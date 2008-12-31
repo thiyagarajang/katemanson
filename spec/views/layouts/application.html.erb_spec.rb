@@ -7,8 +7,9 @@ describe 'layouts/application' do
     response.should have_tag('div.yieldtest', 'yielded')
   end
 
-  it "should set the page title to 'Kate Manson : @nav_title'" do
+  it "should set the page title to 'Kate Manson : @page_title'" do
     assigns[:page_title] = 'Location'
+    assigns[:menu] = []
     render 'content/home', :layout => 'application'
     response.should have_tag('title', 'Kate Manson : Location')
   end

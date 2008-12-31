@@ -1,9 +1,11 @@
 <table class="menu">
   <tr>
-    <td class="current">home</td>
-    <td><a href="/gallery">gallery</a></td>
-    <td><a href="/contact">contact</a></td>
-    <td><a href="/emporium">emporium</a></td>
-    <td><a href="/blog">blog</a></td>
+  <% @menu.each do |page| %>
+    <% if @current_page == page %>
+      <td class="current"><%= page %></td>
+    <% else %>
+      <td><a href="/<%= page %>"><%= page %></a></td>
+    <% end %>
+  <% end %>
   </tr>
 </table>
