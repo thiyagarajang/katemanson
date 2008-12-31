@@ -18,6 +18,7 @@ table.menu {
     font-family: serif;
     font-size: 1.3em;
     font-weight: bold;
+    table-layout: fixed;
     text-align: center;
     width: 100%;
 }
