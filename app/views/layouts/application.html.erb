@@ -1,23 +1,24 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <title>Kate Manson : <%= @page_title %></title>
-  <link rel="stylesheet" href="/style/default.css" />
-</head>
-<body>
+  <head>
+    <title>Kate Manson : <%= @page_title %></title>
+    <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
+    <link rel="stylesheet" href="/style/default.css" />
+  </head>
+  <body>
 
-<div class="centered">
-<img src="/images/kate.png" alt="kate"/>
+    <div class="centered">
+      <img src="/images/kate.png" alt="kate"/>
 
-<%= render :partial => "shared/menu" %>
+      <%= render :partial => "shared/menu" %>
 
-<div class="blackbox">
-  <div class="content">
-    <%= yield %>
-    <div class="copyright">All images copyright Kate Manson &copy;2009</div>
-  </div>
-</div>
-</div>
+      <div class="blackbox">
+        <div class="content">
+          <%= yield %>
+          <div class="copyright">All images copyright Kate Manson &copy;2009</div>
+        </div>
+      </div>
+    </div>
 
-</body>
+  </body>
 </html>

@@ -30,6 +30,11 @@ table.menu td.current {
     background: white;
     color: black;
 }
+
+table.menu td.hover {
+    background: gray;
+}
+
 table.menu td a {
     font-weight: bold;
     text-decoration: none;

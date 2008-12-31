@@ -1,11 +1,21 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+   $("table.menu td:not(.current)").hover(function() {
+     $(this).addClass("hover");
+   },function(){
+     $(this).removeClass("hover");
+   });
+ });
+</script>
+
 <table class="menu">
   <tr>
-  <% @menu.each do |page| %>
-    <% if @current_page == page %>
+  <% @menu.each do |page| -%>
+    <% if @current_page == page -%>
       <td class="current"><%= page %></td>
-    <% else %>
+    <% else -%>
       <td><a href="/<%= page %>"><%= page %></a></td>
-    <% end %>
+    <% end -%>
   <% end %>
   </tr>
 </table>
