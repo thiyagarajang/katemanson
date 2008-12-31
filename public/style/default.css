@@ -10,7 +10,7 @@ a:hover {
     text-decoration: underline;
 }
 
-table.navmenu {
+table.menu {
     background: black;
     border-collapse: collapse;
     border-top: 15px solid black;
@@ -21,18 +21,18 @@ table.navmenu {
     text-align: center;
     width: 100%;
 }
-table.navmenu td.navcurrent {
+table.menu td.current {
     background: white;
     color: black;
 }
-table.navmenu td a {
+table.menu td a {
     font-weight: bold;
     text-decoration: none;
 }
-table.navmenu td a:link {
+table.menu td a:link {
     color: white;
 }
-table.navmenu td a:visited {
+table.menu td a:visited {
     color: white;
 }
 
