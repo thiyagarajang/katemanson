@@ -10,6 +10,10 @@ a:hover {
     text-decoration: underline;
 }
 
+h2 {
+    font-family: serif;
+}
+
 table.menu {
     background: black;
     border-collapse: collapse;
@@ -40,7 +44,7 @@ table.menu td a:visited {
 div.centered {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: 800px;
 }
 
 div.blackbox {
