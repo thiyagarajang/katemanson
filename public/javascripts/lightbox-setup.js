@@ -1,5 +1,6 @@
 $(function(){
     $.Lightbox.construct({
+        download_link: false,
         show_linkback: false,
         show_info: true,
         files: {

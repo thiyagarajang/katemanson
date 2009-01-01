@@ -14,16 +14,33 @@ h2 {
     font-family: serif;
 }
 
-img.thumb {
+img {
     border: hidden;
-    height: 100px;
-    width: 100px;
 }
 
-a.lightbox-enabled img {
-    background-color: #ECECEC;
-    border: 1px solid #999999;
-    padding: 5px 5px 10px;
+.lightbox li {
+    display:inline;
+}
+
+.lightbox a {
+    background-color:#ECECEC;
+    border:1px solid #999999;
+    display:block;
+    float:left;
+    margin:5px;
+    padding:5px 5px 10px;
+}
+.lightbox a:hover {
+    background-color:#FFFFFF;
+    border:1px solid #333333;
+}
+
+.lightbox a img {
+    border:1px solid #999999;
+}
+
+.lightbox a.lightbox-enabled img {
+    border:1px dotted #999999;
 }
 
 table.menu {
@@ -77,4 +94,8 @@ div.copyright {
     margin-top: 3em;
     color: gray;
     font-size: 0.8em;
+}
+
+.clear {
+    clear: left;
 }
