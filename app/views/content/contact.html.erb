@@ -1,17 +1,23 @@
 <% content_for :head do %>
-  <%= javascript_include_tag 'jquery.validate.pack' %>
+  <%= javascript_include_tag 'jquery.form', 'jquery.validate.pack' %>
 <% end %>
 
 <script type="text/javascript">
   $().ready(function() {
-    $("#form").validate();
+    $("#form").validate({
+      submitHandler: function(form) {
+        $(form).ajaxSubmit({
+          target: "#result"
+        });
+      }
+    });
   });
 </script>
 
 <p>Whether you've got a defined commission, a vague notion for a cartoon,
   or want to buy a print from the gallery, you can contact me using the form
 below.</p>
-<form id="form" method="post" action="contact/send">
+<form id="form" method="post" action="/<%= @current_page -%>">
   <fieldset>
     <legend>Please enter your name, email address and a message</legend>
     <p>
