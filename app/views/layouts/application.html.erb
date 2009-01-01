@@ -2,16 +2,14 @@
 <html>
   <head>
     <title>Kate Manson : <%= @page_title %></title>
-    <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
-    <script type="text/javascript" src="/javascripts/jquery.lightbox.packed.js"></script>
-    <script type="text/javascript" src="/javascripts/lightbox-setup.js"></script>
-    <link rel="stylesheet" href="/style/default.css" />
-    <link rel="stylesheet" href="/style/jquery.lightbox.packed.css" />
+    <%= javascript_include_tag 'jquery-1.2.6.min' %>
+    <%= stylesheet_link_tag 'default' %>
+    <%= yield :head %>
   </head>
   <body>
 
     <div class="centered">
-      <img src="/images/header.png" alt="kate"/>
+      <%= image_tag 'header.png', :alt => 'kate' %>
 
       <%= render :partial => "shared/menu" %>
 
