@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   #map.root :controller => 'content'
   map.connect '', :controller => 'content', :action => 'home'
   map.resources :contact, :only => [:index, :create]
+  map.resources :feed, :only => [:index]
   map.connect ':action', :controller => 'content'
 
   # See how all your routes lay out with "rake routes"

@@ -1,2 +1,30 @@
-<p>My blog is here: <a href="http://pinkhalf.blogspot.com">My Pink Half Of The Drain
-Pipe</a>.</p>
+<% content_for :head do %>
+  <%= javascript_include_tag 'jquery.jfeed.pack' %>
+  <script type="text/javascript">
+    jQuery(function() {
+      jQuery.getFeed({
+        url: '/feed',
+        success: function(feed) {
+          var html = '';
+
+          for(var i = 0; i < feed.items.length && i < 5; i++) {
+            var item = feed.items[i];
+
+            html += '<h3>' + item.title + '</h3>'
+
+            html += '<div>'
+              + item.description
+              + '</div>';
+          }
+
+          html += '<br/><div>You can read more at <a href="http://pinkhalf.blogspot.com">My Pink Half Of The Drain Pipe</a>.</div>'
+
+          jQuery('#feed').append(html);
+        }
+      });
+    });
+  </script>
+<% end %>
+
+
+<div id="feed"><h2>From <a href="http://pinkhalf.blogspot.com">My Pink Half Of The Drain Pipe</a>...</h2></div>

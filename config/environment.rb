@@ -77,3 +77,5 @@ end
 
 ActionMailer::Base.delivery_method = :sendmail
 ActionMailer::Base.raise_delivery_errors = true
+
+PINKHALF_FEED_TAG = 'cartoon'
