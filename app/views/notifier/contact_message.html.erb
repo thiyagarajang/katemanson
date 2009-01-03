@@ -1,12 +1,12 @@
 <p><b>Do not click reply - click
-  <a href="mailto:<%= @reply_to %>?subject=<%= @subject %>">here</a> instead.</b>
+  <a href="mailto:<%=@reply_to%>?subject=<%=@subject%>">here</a> instead.</b>
 </p>
 
 <hr />
 <p>
-  Message from '<%= @name %>'
+  Message from '<%=@name%>'
 </p>
 
 <p>
-  <%= @message %>
+  <%=@message.gsub(/\n/, '<br/>')%>
 </p>
