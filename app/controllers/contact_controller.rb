@@ -6,8 +6,15 @@ class ContactController < ApplicationController
 
   def create
     begin
-      Notifier.deliver_contact_message params[:name], params[:email], params[:subject],
-        params[:message]
+      name = params[:name]
+      email = params[:email]
+      subject = params[:subject]
+      message = params[:message]
+      logger.info <<EOF
+Sending email from '#{name} <#{email}>' to '#{CONTACT_EMAIL}' with body:
+'#{message}'
+EOF
+      Notifier.deliver_contact_message name, email, subject, message
       render :text => 'Your message has been sent.'
     rescue
       render :text => <<EOF
