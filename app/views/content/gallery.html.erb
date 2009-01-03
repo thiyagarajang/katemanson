@@ -5,31 +5,54 @@
 
 <p>click on the thumbnails to enlarge</p>
 
-<div class="lightbox"
-     <ul>
-  <li>
-    <a rel="lightbox-cartoons" title="Crimble, maybe?" href="/artwork/threekings.jpg">
-      <img class="thumb" src="/artwork/threekings_thumb.jpg" alt="" />
-    </a>
-  </li>
+<%
+@h = {
+  'caricatures' => {
+    'boris' => 'Boris Johnson',
+    'hillary' => 'Hillary Clinton',
+    'mccartney' => 'McCartney divorce',
+    'obama_kecks' => 'Barack Obama',
+    'palinbugs' => 'John McCain and Sarah Palin',
+    'ratmilkbeetle' => 'Heather Mills and Paul McCartney',
+  },
+  'gag_cartoons' => {
+    'birds' => "\"She's a mail-order bride\"",
+    'charisma' => '"Food poisoning seldom occurs this swiftly, sir. This would appear to be a case of your own charisma"',
+    'holmes' => "\"I fear Holmes is losing his touch, Mrs. Hudson. It has been three days and the sinister mystery of Mr. Rubik's cube remains unsolved\"",
+    'love_of_fine_wine' => '',
+    'witches' => '"Tonight, girls, I got us a horror movie"',
+    'zebra' => '',
+  },
+  'greeting_cards' => {
+    'bee' => 'Love hurts',
+    'egg' => "\" I don't care who died, if you can't pay for the eggs, then hop it\"",
+    'lovecats' => '',
+    'turkey' => '',
+    'vespa_bus' => '',
+    'vespa_hat' => '',
+  },
+  'topical_cartoons' => {
+    'competitive_sport' => "\"I'm sorry, Caroline, but my hands are tied.  I'm nothing without the respect of my homies\"",
+    'fuxtons' => '',
+    'naked' => "\"And Billy had some bad shit, and his friends ran away because they were frightened of being arrested by The Man\"",
+    'sixtyseven' => '',
+    'tramp' => '',
+  }
+}
+%>
 
-  <li>
-    <a rel="lightbox-cartoons" title="He's pretty messed up, doc. Looks like the dude snapped a heel" href="/artwork/dude.jpg">
-      <img class="thumb" src="/artwork/dude_thumb.jpg" alt="" />
-    </a>
-  </li>
-
-  <li>
-    <a rel="lightbox-cartoons" title="Don't you dare blame me" href="/artwork/fish.jpg">
-      <img class="thumb" src="/artwork/fish_thumb.jpg" alt="" />
-    </a>
-  </li>
-
-  <li>
-    <a rel="lightbox-cartoons" title="Super Gordon" href="/artwork/supergordon.jpg">
-      <img class="thumb" src="/artwork/supergordon_thumb.jpg" alt="" />
-    </a>
-  </li>
-</ul>
-<div/>
-<div class="clear"/>
+<% @h.sort.each do |category, artworks| %>
+  <h2><%=category.gsub '_', ' '%></h2>
+  <div class="lightbox">
+    <ul>
+      <% artworks.sort.each do |file, caption| %>
+        <li>
+          <a rel="lightbox-<%=category%>" title="<%=h caption%>" href="/artwork/<%=category%>/<%=file%>_640x480.jpg">
+            <img src="/artwork/<%=category%>/<%=file%>_100x100.jpg" alt="" />
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="clear"/>
+<% end %>
