@@ -12,4 +12,12 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  before_filter :set_nav_context
+
+  private
+
+  def set_nav_context
+    # TODO: figure out how to sort action_methods appropriately
+    @menu = ['home', 'gallery', 'contact', 'emporium', 'blog']
+  end
 end

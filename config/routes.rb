@@ -33,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   #map.root :controller => 'content'
   map.connect '', :controller => 'content', :action => 'home'
+  map.resources :contact, :only => [:index, :update]
   map.connect ':action', :controller => 'content'
 
   # See how all your routes lay out with "rake routes"
