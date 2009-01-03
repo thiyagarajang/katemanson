@@ -18,6 +18,34 @@ img {
     border: hidden;
 }
 
+label{
+    float: left;
+    width: 160px;
+    font-weight: bold;
+}
+
+label.error {
+    color: red;
+    float: none;
+    vertical-align: top;
+}
+
+input, textarea{
+    width: 480px;
+    margin-bottom: 5px;
+}
+
+textarea{
+    width: 480px;
+    height: 240px;
+}
+
+.submit {
+    margin-left: 160px;
+    margin-top: 5px;
+    width: 90px;
+}
+
 .lightbox li {
     display:inline;
 }
