@@ -27,16 +27,20 @@
 below.</p>
 <form id="form" method="post" action="/<%= @current_page -%>">
   <fieldset>
-    <legend>Please enter your name, email address and a message</legend>
+    <legend>Please enter your name, email address, subject and a message</legend>
     <p>
-    <label for="name">Your name</label>
-    <input name="name" class="required" minlength="2" />
+    <label for="name">Name</label>
+    <input name="name" class="required"/>
     <p>
-      <label for="email">Your email address</label>
+      <label for="email">Email</label>
       <input name="email" class="required email" />
     </p>
     <p>
-      <label for="message">Your message</label>
+      <label for="subject">Subject</label>
+      <input name="subject" class="required" />
+    </p>
+    <p>
+      <label for="message">Message</label>
       <textarea name="message" class="required"></textarea>
     </p>
     <p>

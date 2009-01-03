@@ -5,7 +5,16 @@ class ContactController < ApplicationController
   end
 
   def create
-    render :text => 'Your message has been sent.'
+    begin
+      Notifier.deliver_contact_message params[:name], params[:email], params[:subject],
+        params[:message]
+      render :text => 'Your message has been sent.'
+    rescue
+      render :text => <<EOF
+Sorry, there has been a problem sending your message - the site owner has been
+notified.  Please try again later.
+EOF
+    end
   end
 
   private
