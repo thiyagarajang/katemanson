@@ -4,7 +4,8 @@ class ContactController < ApplicationController
   def index
   end
 
-  def update
+  def create
+    render :text => 'Your message has been sent.'
   end
 
   private
