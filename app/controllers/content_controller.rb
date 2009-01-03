@@ -6,9 +6,6 @@ class ContentController < ApplicationController
   def gallery
   end
 
-  def emporium
-  end
-
   def blog
   end
 

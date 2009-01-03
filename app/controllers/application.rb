@@ -18,6 +18,6 @@ class ApplicationController < ActionController::Base
 
   def set_nav_context
     # TODO: figure out how to sort action_methods appropriately
-    @menu = ['home', 'gallery', 'contact', 'emporium', 'blog']
+    @menu = ['home', 'gallery', 'contact', 'blog']
   end
 end
