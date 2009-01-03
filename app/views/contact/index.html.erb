@@ -1,5 +1,7 @@
 <% content_for :head do %>
+  <% # Forgery protection from http://henrik.nyh.se/2008/05/rails-authenticity-token-with-jquery -%>
   <%= javascript_include_tag 'jquery.form', 'jquery.validate.pack' %>
+  <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 <% end %>
 
 <script type="text/javascript">
@@ -11,6 +13,12 @@
         });
       }
     });
+  });
+
+  $(document).ajaxSend(function(event, request, settings) {
+    if (typeof(AUTH_TOKEN) == "undefined") return;
+    settings.data = settings.data || "";
+    settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
   });
 </script>
 
@@ -34,9 +42,9 @@ below.</p>
     </p>
     <p>
       <input class="submit" type="submit" value="Send"/>
+      <div id="result"/>
     </p>
   </fieldset>
 
-  <div id="result"/>
 
 </form>
