@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
   def contact_message name, email, subject, message
-    recipients 'david.dunwoody@gmail.com'
+    recipients CONTACT_EMAIL
     from name
     reply_to email
     subject "[katemanson.co.uk] #{subject}"
